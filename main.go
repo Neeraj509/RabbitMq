@@ -89,14 +89,13 @@ func main() {
 			UpdateRequestHit()
 		}
 	}()
-	// UpdateRequestHit()
+	
 
 	// fmt.Println("Successfully Connected to our RabbitMQ Instance")
 
 	fmt.Println(" [*] - Waiting for messages")
 	<-forever
-	// fmt.Println(1)
-	// UpdateRequestHit()
+	
 
 }
 func UpdateRequestHit() {
@@ -104,33 +103,19 @@ func UpdateRequestHit() {
 	if err != nil {
 		CreateFile(1)
 	} else {
-		//  string(databyte)
-		// fmt.Println(string(databyte))
+		
 		l := string(databyte)
 		l = strings.TrimSuffix(l, "\n")
 		i, _ := strconv.Atoi(l)
 
 		if err != nil {
-			// handle error
 			fmt.Println(err)
 			os.Exit(2)
 		}
-		// k := string(rune(6))
-		// fmt.Println(l, i)
-		// intVar, err := strconv.ParseInt(string(databyte), 0, 8)
-		// k, _ := strconv.Atoi(string(databyte))
-		// checkNilErr(err)
-		// fmt.Println(l + )
 
 		CreateFile(i + 1)
-		// fmt.Println(reflect.TypeOf(i))
-		// CreateFile(3)
 
 	}
 
-	// ioutil.WriteFile("NewFile.txt", []byte("Hello India\n"), 0666)
-
-	// CreateFile(count)"
-	// count++
 
 }
